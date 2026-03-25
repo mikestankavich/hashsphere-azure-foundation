@@ -4,10 +4,6 @@ resource "azurerm_container_app" "prometheus" {
   resource_group_name          = azurerm_resource_group.main.name
   revision_mode                = "Single"
 
-  registry {
-    server = "ghcr.io"
-  }
-
   ingress {
     allow_insecure_connections = true
     external_enabled           = false
@@ -46,10 +42,6 @@ resource "azurerm_container_app" "grafana" {
   container_app_environment_id = azurerm_container_app_environment.main.id
   resource_group_name          = azurerm_resource_group.main.name
   revision_mode                = "Single"
-
-  registry {
-    server = "ghcr.io"
-  }
 
   ingress {
     allow_insecure_connections = false

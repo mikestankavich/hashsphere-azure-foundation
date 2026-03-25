@@ -99,7 +99,7 @@ debug:
     echo "================="
     terraform version
     az version --output table
-    docker version --format 'Docker {{.Client.Version}}'
+    docker version --format 'Docker {{"{{"}}.Client.Version{{"}}"}}'
     echo ""
     echo "Azure Account: $(az account show --query name --output tsv 2>/dev/null || echo 'not authenticated')"
     echo "Subscription: $(az account show --query id --output tsv 2>/dev/null || echo 'n/a')"

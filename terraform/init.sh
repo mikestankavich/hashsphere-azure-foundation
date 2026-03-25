@@ -20,8 +20,7 @@ az storage account create \
     --encryption-services blob \
     --kind StorageV2 \
     --access-tier Hot \
-    --allow-blob-public-access false \
-    --enable-blob-versioning true
+    --allow-blob-public-access false
 
 az storage container create \
     --account-name "$STORAGE_ACCOUNT" \
