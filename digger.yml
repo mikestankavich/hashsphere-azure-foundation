@@ -8,3 +8,4 @@ projects:
       enabled: true
     auto_approve:
       enabled: false
+    disable_locking: true
