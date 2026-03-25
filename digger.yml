@@ -1,3 +1,5 @@
+telemetry: false
+
 projects:
   - name: hashsphere-foundation
     dir: terraform
