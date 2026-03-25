@@ -32,7 +32,7 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - uses: diggerhq/digger@v0.6
+      - uses: diggerhq/digger@v0.6.144
         with:
           setup-terraform: true
           terraform-version: 1.14.7
