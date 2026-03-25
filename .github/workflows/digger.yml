@@ -36,6 +36,7 @@ jobs:
         with:
           setup-terraform: true
           terraform-version: 1.14.7
+          no-backend: true
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -43,4 +44,3 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           ARM_USE_OIDC: "true"
-          NO_BACKEND: "true"
