@@ -16,4 +16,10 @@ resource "azurerm_container_app_environment" "main" {
   infrastructure_subnet_id   = azurerm_subnet.aca.id
 
   tags = local.common_tags
+
+  lifecycle {
+    ignore_changes = [
+      infrastructure_resource_group_name,
+    ]
+  }
 }

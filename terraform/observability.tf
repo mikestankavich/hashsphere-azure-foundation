@@ -15,6 +15,8 @@ resource "azurerm_container_app" "prometheus" {
   }
 
   template {
+    min_replicas = 1
+
     container {
       name   = "prometheus"
       image  = var.prometheus_image
@@ -54,6 +56,8 @@ resource "azurerm_container_app" "grafana" {
   }
 
   template {
+    min_replicas = 1
+
     container {
       name   = "grafana"
       image  = var.grafana_image

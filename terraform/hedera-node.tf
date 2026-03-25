@@ -15,6 +15,8 @@ resource "azurerm_container_app" "consensus" {
   }
 
   template {
+    min_replicas = 1
+
     container {
       name   = "node-simulator"
       image  = var.node_image
@@ -64,6 +66,8 @@ resource "azurerm_container_app" "mirror" {
   }
 
   template {
+    min_replicas = 1
+
     container {
       name   = "node-simulator"
       image  = var.node_image
