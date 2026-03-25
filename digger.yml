@@ -1,0 +1,8 @@
+projects:
+  - name: hashsphere-foundation
+    dir: terraform
+    workflow: default
+    auto_plan:
+      enabled: true
+    auto_approve:
+      enabled: false
