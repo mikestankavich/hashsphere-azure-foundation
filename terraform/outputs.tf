@@ -5,7 +5,7 @@ output "resource_group_name" {
 
 output "grafana_url" {
   description = "Grafana dashboard URL (external)"
-  value       = "https://${azurerm_container_app.grafana.latest_revision_fqdn}"
+  value       = "https://${azurerm_container_app.grafana.ingress[0].fqdn}"
 }
 
 output "aca_environment_name" {
