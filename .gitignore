@@ -1,0 +1,43 @@
+# Sensitive environment files
+.env
+.env.*
+!.env.local.example
+
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+terraform.tfplan
+*.tfplan
+terraform-debug.log
+crash.log
+
+# Go
+bin/
+vendor/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+
+# Security scanning results
+.tfsec/
+.checkov/
