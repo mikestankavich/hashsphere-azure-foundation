@@ -180,6 +180,14 @@ Provider: `azurerm ~> 4.0`
 └── .envrc                 # direnv auto-loader
 ```
 
+## Roadmap
+
+- **Real Hedera mirror node** — Replace the simulated mirror with [`hedera-mirror-node`](https://github.com/hashgraph/hedera-mirror-node) on ACA, backed by managed PostgreSQL, subscribing to the public testnet
+- **JSON-RPC relay** — Add the [Hedera JSON-RPC relay](https://github.com/hashgraph/hedera-json-rpc-relay) for EVM-compatible access
+- **Private consensus network** — Run a full private Hedera network via [Solo](https://github.com/hashgraph/solo) on a hybrid homelab using the [`lxc/incus`](https://registry.terraform.io/providers/lxc/incus/latest) Terraform provider. This could run entirely on ACA, but a hybrid approach keeps compute costs down for the 3+ consensus nodes (~2-4 vCPU each) while Azure handles the public-facing services
+- **AKS migration path** — Evaluate Azure Kubernetes Service as an alternative to ACA for workloads that need persistent volumes, StatefulSets, or more granular scheduling control
+- **Azure DevOps pipelines** — Alternative CI/CD path using Azure Pipelines for organizations standardized on the Azure DevOps toolchain
+
 ## Disclaimer
 
 This project is a proof of concept demonstrating Azure infrastructure patterns for DLT workloads, inspired by the Hedera Hashgraph architecture. It is not affiliated with, endorsed by, or sponsored by Hashgraph, Hedera, or the HBAR Foundation. Hedera, Hashgraph, and related marks are trademarks of their respective owners.
