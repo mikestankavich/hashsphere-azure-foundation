@@ -180,6 +180,10 @@ Provider: `azurerm ~> 4.0`
 └── .envrc                 # direnv auto-loader
 ```
 
+## Disclaimer
+
+This project is a proof of concept demonstrating Azure infrastructure patterns for DLT workloads, inspired by the Hedera Hashgraph architecture. It is not affiliated with, endorsed by, or sponsored by Hashgraph, Hedera, or the HBAR Foundation. Hedera, Hashgraph, and related marks are trademarks of their respective owners.
+
 ## License
 
 [MIT](LICENSE)
